@@ -1,0 +1,87 @@
+.topTracksContainer {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(33.33%, 1fr) );
+  align-content: space-around;
+}
+
+.topOneTrackCard {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid gold;
+  border-radius: 15px;
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  text-shadow: 
+  2px 2px 5px black, 
+  -2px -2px 5px black, 
+  2px -2px 5px black, 
+  -2px 2px 5px black;
+}
+
+.topTracksCard {
+  font-weight: 600;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  align-self: center;
+  overflow: hidden;
+  text-overflow: fade;
+  grid-column: span 1;
+  border: 1px solid;
+  border-color: white;
+  border-radius: 15px;
+  text-shadow: 
+  2px 2px 5px black, 
+  -2px -2px 5px black, 
+  2px -2px 5px black, 
+  -2px 2px 5px black;
+}
+
+.topArtistsContainer {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(33.33%, 1fr) );
+  align-content: space-around;
+}
+
+.topOneArtistCard {
+  margin: 10px;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid gold;
+  border-radius: 15px;
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  text-shadow: 
+  2px 2px 5px black, 
+  -2px -2px 5px black, 
+  2px -2px 5px black, 
+  -2px 2px 5px black;
+}
+
+.topArtistsCard {
+  font-weight: 600;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  max-width: 100%;
+  align-self: center;
+  overflow: hidden;
+  grid-column: span 1;
+  border: 1px solid;
+  border-color: white;
+  border-radius: 15px;
+  text-shadow: 
+  2px 2px 5px black, 
+  -2px -2px 5px black, 
+  2px -2px 5px black, 
+  -2px 2px 5px black;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
