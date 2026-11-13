@@ -24,5 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Env file
-.env
+# Environment files (keep only the safe example in version control)
+.env*
+!.env.example
