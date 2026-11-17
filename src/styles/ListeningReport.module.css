@@ -1,0 +1,516 @@
+/* Listening report */
+.toplineRight
+  > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(
+    --acid
+  );
+  box-shadow: 0 0
+    12px #c4f26a66;
+}
+.kicker {
+  color: var(
+    --acid
+  );
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+.sectionHeading
+  h2
+  span {
+  color: var(
+    --acid
+  );
+  font-family:
+    Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.rangeControl
+  button:focus-visible, .trackRow:focus-visible, .artistCard:focus-visible {
+  outline: 2px solid
+    var(--acid);
+  outline-offset: 4px;
+}
+.statsSection {
+  padding: 24px 0
+    72px;
+}
+.sectionTopline {
+  display: flex;
+  justify-content: space-between;
+  color: #777c72;
+  font-size: 9px;
+  letter-spacing: 1.3px;
+}
+.toplineRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.toplineRight
+  > span {
+  width: 5px;
+  height: 5px;
+}
+.sectionHeading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 47px 0
+    29px;
+}
+.kicker {
+  margin: 0 0 10px;
+  font-size: 9px;
+}
+.sectionHeading h2 {
+  margin: 0;
+  font-size: clamp(
+    31px,
+    4vw,
+    43px
+  );
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+.rangeControl {
+  display: flex;
+  gap: 3px;
+  padding: 4px;
+  border: 1px solid
+    var(--line);
+  border-radius: 999px;
+}
+.rangeControl
+  button {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(
+    --muted
+  );
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+.rangeControl
+  button:hover {
+  color: var(--ink);
+}
+.rangeControl
+  .rangeActive {
+  color: #192014;
+  background: var(
+    --acid
+  );
+}
+.emptyState {
+  min-height: 132px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid
+    var(--line);
+  border-radius: 5px;
+  padding: 25px 29px;
+  background: linear-gradient(
+    110deg,
+    #ffffff04,
+    transparent
+  );
+}
+.emptyIcon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  place-items: center;
+  border: 1px solid
+    #c5f76c2b;
+  border-radius: 50%;
+  color: var(
+    --acid
+  );
+  font-size: 20px;
+}
+.emptyState h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 550;
+}
+.emptyState p {
+  margin: 0;
+  color: var(
+    --muted
+  );
+  font-size: 12px;
+  line-height: 1.6;
+}
+.emptyArrow {
+  margin-left: auto;
+  color: var(
+    --acid
+  );
+  font-size: 22px;
+}
+.retryButton {
+  margin-left: auto;
+  border: 1px solid
+    var(--line);
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}
+.loadingState {
+  display: flex;
+  min-height: 132px;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: 1px solid
+    var(--line);
+  border-radius: 5px;
+  color: var(
+    --muted
+  );
+  font-size: 12px;
+}
+.loader {
+  width: 15px;
+  height: 15px;
+  border: 2px solid
+    #c5f76c32;
+  border-top-color: var(
+    --acid
+  );
+  border-radius: 50%;
+  animation: spin
+    0.7s linear
+    infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(
+      360deg
+    );
+  }
+}
+.resultsGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 22px;
+}
+.resultPanel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid
+    var(--line);
+  border-radius: 5px;
+}
+.panelHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 21px
+    18px;
+}
+.panelHeading
+  .kicker {
+  margin-bottom: 7px;
+}
+.panelHeading h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.countBadge {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid
+    var(--line);
+  border-radius: 50%;
+  color: var(
+    --acid
+  );
+  font-size: 9px;
+}
+.listHeading {
+  display: grid;
+  grid-template-columns: 1fr 36%;
+  padding: 10px 17px;
+  border-top: 1px
+    solid
+    var(--line);
+  border-bottom: 1px
+    solid
+    var(--line);
+  color: #72766d;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.trackRow {
+  display: grid;
+  min-height: 65px;
+  grid-template-columns:
+    22px 38px minmax(
+      0,
+      1fr
+    )
+    33% 16px;
+  align-items: center;
+  gap: 11px;
+  padding: 8px 17px;
+  border-bottom: 1px
+    solid #ffffff0a;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background
+    0.18s;
+}
+.trackRow:hover, .artistCard:hover {
+  background: #ffffff09;
+}
+.rank {
+  color: #777c72;
+  font-size: 9px;
+  font-variant-numeric: tabular-nums;
+}
+.trackCover {
+  width: 38px;
+  height: 38px;
+  border-radius: 2px;
+  object-fit: cover;
+  background: #25291f;
+}
+.trackInfo {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.trackInfo strong, .albumName {
+  overflow: hidden;
+  font-size: 11px;
+  font-weight: 550;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.trackInfo small {
+  overflow: hidden;
+  color: var(
+    --muted
+  );
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.albumName {
+  color: var(
+    --muted
+  );
+  font-size: 9px;
+  font-weight: 400;
+}
+.rowArrow {
+  width: 13px;
+  height: 13px;
+  color: #74796f;
+}
+.artistGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
+  gap: 9px;
+  padding: 0 17px
+    18px;
+}
+.artistCard {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 1.25;
+  overflow: hidden;
+  border: 1px solid
+    #ffffff0d;
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  background: #25291f;
+}
+.artistCard::after {
+  position: absolute;
+  inset: 25% 0 0;
+  background: linear-gradient(
+    transparent,
+    #000b
+  );
+  content: "";
+}
+.artistCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform
+    0.3s;
+}
+.artistCard:hover
+  img {
+  transform: scale(
+    1.04
+  );
+}
+.artistRank {
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  left: 10px;
+  color: #fff;
+  font-size: 9px;
+  text-shadow: 0 1px
+    5px #000;
+}
+.artistName {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 1px
+    5px #000;
+}
+.artistFallback {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: var(
+    --acid
+  );
+  font-size: 40px;
+}
+.artistCard:has(
+    .artistFallback
+  )::after {
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    #c5f76c12,
+    transparent 70%
+  );
+}
+.noResults {
+  grid-column: 1 /
+    -1;
+  padding: 8px;
+  color: var(
+    --muted
+  );
+  font-size: 11px;
+}
+
+@media (max-width: 800px) {
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .statsSection {
+    padding-top: 20px;
+  }
+  .toplineRight {
+    font-size: 0;
+  }
+  .sectionHeading {
+    align-items: start;
+    flex-direction: column;
+    margin: 37px 0
+      21px;
+  }
+  .sectionHeading
+    h2 {
+    font-size: 34px;
+  }
+  .rangeControl {
+    max-width: 100%;
+  }
+  .rangeControl
+    button {
+    padding: 8px
+      10px;
+    font-size: 9px;
+  }
+  .emptyState {
+    align-items: flex-start;
+    gap: 13px;
+    padding: 18px
+      14px;
+  }
+  .emptyIcon {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+  .emptyState h3 {
+    font-size: 13px;
+  }
+  .emptyState p {
+    font-size: 10px;
+  }
+  .emptyArrow {
+    display: none;
+  }
+  .retryButton {
+    align-self: center;
+    flex: 0 0 auto;
+    padding: 8px;
+    font-size: 9px;
+  }
+  .panelHeading {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+  .listHeading {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .trackRow {
+    grid-template-columns:
+      18px 33px minmax(
+        0,
+        1fr
+      )
+      15px;
+    gap: 8px;
+    padding-right: 11px;
+    padding-left: 12px;
+  }
+  .trackCover {
+    width: 33px;
+    height: 33px;
+  }
+  .albumName {
+    display: none;
+  }
+}

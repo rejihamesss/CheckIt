@@ -1,0 +1,364 @@
+/* Hero section */
+.connectedLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(
+    --muted
+  );
+  font-size: 12px;
+}
+.connectedLabel
+  > span:first-child {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(
+    --acid
+  );
+  box-shadow: 0 0
+    12px #c4f26a66;
+}
+.hero {
+  min-height: 510px;
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  align-items: center;
+  border-bottom: 1px
+    solid
+    var(--line);
+  overflow: hidden;
+}
+.heroCopy {
+  position: relative;
+  z-index: 1;
+  padding: 50px 0
+    56px;
+}
+.eyebrow {
+  color: var(
+    --acid
+  );
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 23px;
+}
+.eyebrowLine {
+  width: 22px;
+  height: 1px;
+  background: var(
+    --acid
+  );
+}
+.hero h1 {
+  margin: 0;
+  font-size: clamp(
+    58px,
+    7vw,
+    88px
+  );
+  font-weight: 500;
+  line-height: 0.99;
+  letter-spacing: -6px;
+}
+.hero h1 span {
+  color: var(
+    --acid
+  );
+  font-family:
+    Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.heroText {
+  max-width: 390px;
+  margin: 24px 0
+    25px;
+  color: var(
+    --muted
+  );
+  font-size: 14px;
+  line-height: 1.8;
+}
+.connectButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 18px;
+  color: #182014;
+  background: var(
+    --acid
+  );
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.connectButton:hover {
+  transform: translateY(
+    -2px
+  );
+  background: #d2fa86;
+}
+.connectButton:focus-visible {
+  outline: 2px solid
+    var(--acid);
+  outline-offset: 4px;
+}
+.connectButton svg {
+  width: 16px;
+  height: 16px;
+}
+.spotifyGlyph {
+  font-size: 19px;
+}
+.caption {
+  margin: 13px 0 0;
+  color: #767a72;
+  font-size: 10px;
+}
+.caption strong {
+  color: #a9ada4;
+  font-weight: 500;
+}
+.connectedLabel {
+  margin: 25px 0 0;
+  color: var(--ink);
+}
+.connectedLabel
+  > span:first-child {
+  width: 8px;
+  height: 8px;
+}
+.dotDivider {
+  color: var(
+    --muted
+  );
+}
+.errorMessage {
+  max-width: 440px;
+  margin: 14px 0 0;
+  color: #ff9c8b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.heroArt {
+  min-height: 440px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.orbit {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border: 1px solid
+    #d2f6a31c;
+  border-radius: 50%;
+}
+.orbitOne {
+  width: 320px;
+  height: 320px;
+}
+.orbitTwo {
+  width: 455px;
+  height: 455px;
+  border-style: dashed;
+  border-color: #d2f6a312;
+}
+.artCore {
+  z-index: 1;
+  display: flex;
+  width: 220px;
+  height: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid
+    #c5f76c40;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 46%
+      38%,
+    #d2f6a328,
+    #161914 69%
+  );
+  box-shadow:
+    0 0 90px
+      #c5f76c14,
+    inset 0 0 50px
+      #c5f76c0c;
+  transform: rotate(
+    -9deg
+  );
+}
+.artNote {
+  color: var(
+    --acid
+  );
+  font-family:
+    Georgia, serif;
+  font-size: 96px;
+  line-height: 1;
+}
+.artLabel {
+  color: #b1b8a7;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+}
+.floatingCard {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid
+    #ffffff17;
+  border-radius: 3px;
+  padding: 11px 13px;
+  color: #bec2b8;
+  background: #1e211b;
+  box-shadow: 0 10px
+    35px #0004;
+  font-size: 8px;
+  letter-spacing: 0.8px;
+}
+.cardOne {
+  top: 85px;
+  right: 1%;
+  transform: rotate(
+    4deg
+  );
+}
+.cardTwo {
+  bottom: 95px;
+  left: 5%;
+  transform: rotate(
+    -5deg
+  );
+}
+.cardTwo span {
+  color: var(
+    --acid
+  );
+}
+.floatDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(
+    --acid
+  );
+}
+.sparkle {
+  position: absolute;
+  top: 92px;
+  left: 16%;
+  color: var(
+    --acid
+  );
+  font-size: 23px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 450px;
+    grid-template-columns: 1fr 0.7fr;
+  }
+  .hero h1 {
+    font-size: clamp(
+      54px,
+      9vw,
+      72px
+    );
+    letter-spacing: -4px;
+  }
+  .heroArt {
+    min-height: 360px;
+  }
+  .orbitTwo {
+    width: 330px;
+    height: 330px;
+  }
+  .orbitOne {
+    width: 250px;
+    height: 250px;
+  }
+  .artCore {
+    width: 170px;
+    height: 170px;
+  }
+  .artNote {
+    font-size: 72px;
+  }
+  .floatingCard {
+    font-size: 7px;
+  }
+}
+@media (max-width: 560px) {
+  .hero {
+    position: relative;
+    min-height: 565px;
+    grid-template-columns: 1fr;
+    align-content: start;
+  }
+  .heroCopy {
+    padding: 51px 0
+      0;
+  }
+  .hero h1 {
+    font-size: 67px;
+  }
+  .heroText {
+    max-width: 340px;
+    font-size: 13px;
+  }
+  .heroArt {
+    position: absolute;
+    right: -23px;
+    bottom: -111px;
+    width: 245px;
+    min-height: 275px;
+    opacity: 0.66;
+  }
+  .orbitTwo {
+    width: 265px;
+    height: 265px;
+  }
+  .orbitOne {
+    width: 205px;
+    height: 205px;
+  }
+  .artCore {
+    width: 135px;
+    height: 135px;
+  }
+  .artNote {
+    font-size: 58px;
+  }
+  .cardOne {
+    top: 35px;
+    right: 0;
+  }
+  .cardTwo {
+    bottom: 40px;
+    left: -8px;
+  }
+  .sparkle {
+    top: 39px;
+    left: 10px;
+  }
+}

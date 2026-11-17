@@ -1,0 +1,165 @@
+/* App shell and footer */
+
+.appShell {
+  width: min(
+    1280px,
+    calc(
+      100% - 112px
+    )
+  );
+  margin: 0 auto;
+}
+
+.topbar, .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topbar {
+  height: 88px;
+  border-bottom: 1px
+    solid
+    var(--line);
+}
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+.logoMark {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(
+    --acid
+  );
+  color: #182014;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.privacyNote {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(
+    --muted
+  );
+  font-size: 12px;
+}
+.privacyNote > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(
+    --acid
+  );
+  box-shadow: 0 0
+    12px #c4f26a66;
+}
+.disconnectButton {
+  border: 1px solid
+    var(--line);
+  border-radius: 999px;
+  padding: 9px 16px;
+  color: var(
+    --muted
+  );
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  transition:
+    border-color
+      0.2s,
+    color 0.2s;
+}
+.disconnectButton:hover {
+  border-color: var(
+    --acid
+  );
+  color: var(--ink);
+}
+.disconnectButton:focus-visible {
+  outline: 2px solid
+    var(--acid);
+  outline-offset: 4px;
+}
+.footer {
+  min-height: 80px;
+  gap: 18px;
+  border-top: 1px
+    solid
+    var(--line);
+  color: #777c72;
+  font-size: 9px;
+}
+.footer .wordmark {
+  font-size: 14px;
+}
+.footer .logoMark {
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+}
+.footer
+  > span:last-child {
+  letter-spacing: 1.1px;
+}
+.footer b {
+  padding-left: 5px;
+  color: var(
+    --acid
+  );
+}
+
+@media (max-width: 800px) {
+  .appShell {
+    width: min(
+      100% - 48px,
+      640px
+    );
+  }
+}
+@media (max-width: 560px) {
+  .appShell {
+    width: calc(
+      100% - 36px
+    );
+  }
+  .topbar {
+    height: 70px;
+  }
+  .footer {
+    min-height: 74px;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0;
+  }
+  .footer
+    > span:nth-child(
+      2
+    ) {
+    display: none;
+  }
+  .footer
+    > span:last-child {
+    font-size: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

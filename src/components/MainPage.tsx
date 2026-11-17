@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { HiArrowUpRight, HiMusicalNote, HiOutlineArrowTopRightOnSquare } from "react-icons/hi2";
-import styles from "../styles/ItemStyles.module.css";
+import shellStyles from "../styles/AppShell.module.css";
+import heroStyles from "../styles/Hero.module.css";
+import reportStyles from "../styles/ListeningReport.module.css";
+
+const styles = { ...shellStyles, ...heroStyles, ...reportStyles };
 
 const CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 const REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
