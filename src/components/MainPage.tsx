@@ -46,6 +46,21 @@ function spotifyWebUrl(value?: string) {
   }
 }
 
+function spotifyImageUrl(value?: string) {
+  if (!value) return undefined;
+  try {
+    const url = new URL(value);
+    const hostname = url.hostname.toLowerCase();
+    const trustedHost = hostname === "scdn.co" || hostname.endsWith(".scdn.co") ||
+      hostname === "spotifycdn.com" || hostname.endsWith(".spotifycdn.com");
+    return url.protocol === "https:" && trustedHost && !url.username && !url.password
+      ? url.toString()
+      : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 function MainPage() {
   const [token, setToken] = useState<Token | null>(null);
   const [tracks, setTracks] = useState<Track[]>([]);
@@ -238,14 +253,14 @@ function MainPage() {
               <div className={styles.panelHeading}><div><p className={styles.kicker}>ON REPEAT</p><h3 id="tracks-title">Top tracks</h3></div><span className={styles.countBadge}>{tracks.length.toString().padStart(2, "0")}</span></div>
               <div className={styles.listHeading}><span>RANK / TRACK</span><span>ALBUM</span></div>
               {tracks.length ? tracks.map((track, index) => <a className={styles.trackRow} href={spotifyWebUrl(track.external_urls?.spotify)} target="_blank" rel="noopener noreferrer" key={track.id}>
-                <span className={styles.rank}>{(index + 1).toString().padStart(2, "0")}</span><img className={styles.trackCover} src={track.album.images?.[2]?.url ?? track.album.images?.[0]?.url} alt="" /><span className={styles.trackInfo}><strong>{track.name}</strong><small>{track.artists.map((artist) => artist.name).join(", ")}</small></span><span className={styles.albumName}>{track.album.name}</span><HiOutlineArrowTopRightOnSquare className={styles.rowArrow} aria-hidden="true" />
+                <span className={styles.rank}>{(index + 1).toString().padStart(2, "0")}</span><img className={styles.trackCover} src={spotifyImageUrl(track.album.images?.[2]?.url) ?? spotifyImageUrl(track.album.images?.[0]?.url)} referrerPolicy="no-referrer" alt="" /><span className={styles.trackInfo}><strong>{track.name}</strong><small>{track.artists.map((artist) => artist.name).join(", ")}</small></span><span className={styles.albumName}>{track.album.name}</span><HiOutlineArrowTopRightOnSquare className={styles.rowArrow} aria-hidden="true" />
               </a>) : <p className={styles.noResults}>No top tracks found for this period.</p>}
             </section>
             <section className={styles.resultPanel} aria-labelledby="artists-title">
               <div className={styles.panelHeading}><div><p className={styles.kicker}>THE SOUNDTRACK</p><h3 id="artists-title">Top artists</h3></div><span className={styles.countBadge}>{artists.length.toString().padStart(2, "0")}</span></div>
               <div className={styles.artistGrid}>
                 {artists.length ? artists.map((artist, index) => <a className={styles.artistCard} href={spotifyWebUrl(artist.external_urls?.spotify)} target="_blank" rel="noopener noreferrer" key={artist.id}>
-                  {artist.images?.[0]?.url ? <img src={artist.images[0].url} alt="" /> : <span className={styles.artistFallback}>♫</span>}<span className={styles.artistRank}>{(index + 1).toString().padStart(2, "0")}</span><span className={styles.artistName}>{artist.name}</span>
+                  {spotifyImageUrl(artist.images?.[0]?.url) ? <img src={spotifyImageUrl(artist.images?.[0]?.url)} referrerPolicy="no-referrer" alt="" /> : <span className={styles.artistFallback}>♫</span>}<span className={styles.artistRank}>{(index + 1).toString().padStart(2, "0")}</span><span className={styles.artistName}>{artist.name}</span>
                 </a>) : <p className={styles.noResults}>No top artists found for this period.</p>}
               </div>
             </section>
